@@ -9,13 +9,31 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="cell2">cell2</string>
     <string name="cell1">cell1</string>
+    <string name="cell2">cell2</string>
     <string name="cell3">cell3</string>
     <string name="cell4">cell4</string>
     <string name="cell5">cell5</string>
     <string name="cell6">cell6</string>
-    <string name="cell9">cell9</string>
-    <string name="cell8">cell8</string>
     <string name="cell7">cell7</string>
+    <string name="cell8">cell8</string>
+    <string name="cell9">cell9</string>
+    <string name="cell1Orange">cell1Orange</string>
+    <string name="cell1Blue">cell1Blue</string>
+    <string name="cell2Orange">cell2Orange</string>
+    <string name="cell2Blue">cell2Blue</string>
+    <string name="cell3Orange">cell3Orange</string>
+    <string name="cell3Blue">cell3Blue</string>
+    <string name="cell4Orange">cell4Orange</string>
+    <string name="cell4Blue">cell4Blue</string>
+    <string name="cell5Orange">cell5Orange</string>
+    <string name="cell5Blue">cell5Blue</string>
+    <string name="cell6Orange">cell6Orange</string>
+    <string name="cell6Blue">cell6Blue</string>
+    <string name="cell7Orange">cell7Orange</string>
+    <string name="cell7Blue">cell7Blue</string>
+    <string name="cell8Orange">cell8Orange</string>
+    <string name="cell8Blue">cell8Blue</string>
+    <string name="cell9Orange">cell9Orange</string>
+    <string name="cell9Blue">cell9Blue</string>
 </resources>

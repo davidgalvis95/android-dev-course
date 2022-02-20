@@ -6,6 +6,380 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="402dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="179dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/TicTacToeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/tic_tac_toe_layout" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="410dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="134dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cell1Layout"
+                        android:layout_width="259dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/cell1Orange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/cell1Orange"
+                            android:tag="@string/cell1Orange"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/orange_circle"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/cell1Blue"
+                            android:layout_width="0dp"
+                            android:layout_height="116dp"
+                            android:layout_marginTop="14dp"
+                            android:contentDescription="@string/cell1Blue"
+                            android:tag="@string/cell1Blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/blue_circle"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cell2Layout"
+                        android:layout_width="259dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/cell2Orange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/cell2Orange"
+                            android:tag="@string/cell2Orange"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/orange_circle"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/cell2Blue"
+                            android:layout_width="0dp"
+                            android:layout_height="116dp"
+                            android:layout_marginTop="14dp"
+                            android:contentDescription="@string/cell2Blue"
+                            android:tag="@string/cell2Blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/blue_circle"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cell3Layout"
+                        android:layout_width="259dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/cell3Orange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/cell3Orange"
+                            android:tag="@string/cell3Orange"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/orange_circle"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/cell3Blue"
+                            android:layout_width="0dp"
+                            android:layout_height="116dp"
+                            android:layout_marginTop="14dp"
+                            android:contentDescription="@string/cell3Blue"
+                            android:tag="@string/cell3Blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/blue_circle"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cell4Layout"
+                        android:layout_width="259dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/cell4Orange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/cell4Orange"
+                            android:tag="@string/cell4Orange"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/orange_circle"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/cell4Blue"
+                            android:layout_width="0dp"
+                            android:layout_height="116dp"
+                            android:layout_marginTop="14dp"
+                            android:contentDescription="@string/cell4Blue"
+                            android:tag="@string/cell4Blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/blue_circle"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cell5Layout"
+                        android:layout_width="259dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/cell5Orange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/cell5Orange"
+                            android:tag="@string/cell5Orange"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/orange_circle"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/cell5Blue"
+                            android:layout_width="0dp"
+                            android:layout_height="116dp"
+                            android:layout_marginTop="14dp"
+                            android:contentDescription="@string/cell5Blue"
+                            android:tag="@string/cell5Blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/blue_circle"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cell6Layout"
+                        android:layout_width="259dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/cell6Orange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/cell6Orange"
+                            android:tag="@string/cell6Orange"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/orange_circle"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/cell6Blue"
+                            android:layout_width="0dp"
+                            android:layout_height="116dp"
+                            android:layout_marginTop="14dp"
+                            android:contentDescription="@string/cell6Blue"
+                            android:tag="@string/cell6Blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/blue_circle"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cell7Layout"
+                        android:layout_width="259dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/cell7Orange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/cell7Orange"
+                            android:tag="@string/cell7Orange"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/orange_circle"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/cell7Blue"
+                            android:layout_width="0dp"
+                            android:layout_height="116dp"
+                            android:layout_marginTop="14dp"
+                            android:contentDescription="@string/cell7Blue"
+                            android:tag="@string/cell7Blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/blue_circle"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cell8Layout"
+                        android:layout_width="259dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/cell8Orange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/cell8Orange"
+                            android:tag="@string/cell8Orange"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/orange_circle"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/cell8Blue"
+                            android:layout_width="0dp"
+                            android:layout_height="116dp"
+                            android:layout_marginTop="14dp"
+                            android:contentDescription="@string/cell8Blue"
+                            android:tag="@string/cell8Blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/blue_circle"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cell9Layout"
+                        android:layout_width="259dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/cell9Orange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="16dp"
+                            android:contentDescription="@string/cell9Orange"
+                            android:tag="@string/cell9Orange"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/orange_circle"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/cell9Blue"
+                            android:layout_width="0dp"
+                            android:layout_height="116dp"
+                            android:layout_marginTop="14dp"
+                            android:contentDescription="@string/cell9Blue"
+                            android:tag="@string/cell9Blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/blue_circle"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </TableRow>
+            </TableLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/winnerMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="69dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/playAgainButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="158dp"
+            android:layout_marginTop="101dp"
+            android:layout_marginEnd="159dp"
+            android:layout_marginBottom="30dp"
+            android:text="Play Again"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,148 +393,5 @@
             app:popupTheme="@style/Theme.TicTacToe.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="402dp"
-        android:layout_marginTop="60dp">
-
-        <TableLayout
-            android:layout_width="wrap_content"
-            android:layout_height="410dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="134dp">
-
-                <ImageView
-                    android:id="@+id/cell1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/cell1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/orange_circle" />
-
-                <ImageView
-                    android:id="@+id/cell2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/cell2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/orange_circle" />
-
-                <ImageView
-                    android:id="@+id/cell3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/cell3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/orange_circle" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="119dp">
-
-                <ImageView
-                    android:id="@+id/cell4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/cell4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/orange_circle" />
-
-                <ImageView
-                    android:id="@+id/cell5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/cell5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/orange_circle" />
-
-                <ImageView
-                    android:id="@+id/cell6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/cell6"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/orange_circle" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="134dp">
-
-                <ImageView
-                    android:id="@+id/cell7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/cell7"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/orange_circle" />
-
-                <ImageView
-                    android:id="@+id/cell8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/cell8"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/orange_circle" />
-
-                <ImageView
-                    android:id="@+id/cell9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/cell9"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/orange_circle" />
-            </TableRow>
-        </TableLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
