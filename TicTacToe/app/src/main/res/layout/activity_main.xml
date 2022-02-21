@@ -51,23 +51,12 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/cell1Orange"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/cell1"
+                            android:layout_width="0dp"
                             android:layout_height="120dp"
                             android:layout_marginTop="16dp"
-                            android:contentDescription="@string/cell1Orange"
-                            android:tag="@string/cell1Orange"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            tools:ignore="ImageContrastCheck" />
-
-                        <ImageView
-                            android:id="@+id/cell1Blue"
-                            android:layout_width="0dp"
-                            android:layout_height="116dp"
-                            android:layout_marginTop="14dp"
-                            android:contentDescription="@string/cell1Blue"
-                            android:tag="@string/cell1Blue"
+                            android:contentDescription="@string/cell1"
+                            android:tag="@string/cell1"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -79,32 +68,19 @@
                         android:id="@+id/cell2Layout"
                         android:layout_width="259dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:visibility="visible">
+                        android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/cell2Blue"
+                            android:id="@+id/cell2"
                             android:layout_width="0dp"
-                            android:layout_height="116dp"
-                            android:layout_marginTop="14dp"
-                            android:contentDescription="@string/cell2Blue"
-                            android:tag="@string/cell2Blue"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/blue_circle"
-                            tools:ignore="ImageContrastCheck" />
-
-                        <ImageView
-                            android:id="@+id/cell2Orange"
-                            android:layout_width="wrap_content"
                             android:layout_height="120dp"
                             android:layout_marginTop="16dp"
-                            android:contentDescription="@string/cell2Orange"
-                            android:tag="@string/cell2Orange"
+                            android:contentDescription="@string/cell2"
+                            android:tag="@string/cell2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/orange_circle"
                             tools:ignore="ImageContrastCheck" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -115,28 +91,16 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/cell3Orange"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/cell3"
+                            android:layout_width="0dp"
                             android:layout_height="120dp"
                             android:layout_marginTop="16dp"
-                            android:contentDescription="@string/cell3Orange"
-                            android:tag="@string/cell3Orange"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/orange_circle"
-                            tools:ignore="ImageContrastCheck" />
-
-                        <ImageView
-                            android:id="@+id/cell3Blue"
-                            android:layout_width="0dp"
-                            android:layout_height="116dp"
-                            android:layout_marginTop="14dp"
-                            android:contentDescription="@string/cell3Blue"
-                            android:tag="@string/cell3Blue"
+                            android:contentDescription="@string/cell3"
+                            android:tag="@string/cell3"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/blue_circle"
                             tools:ignore="ImageContrastCheck" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -153,28 +117,16 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/cell4Orange"
-                            android:layout_width="wrap_content"
-                            android:layout_height="120dp"
-                            android:layout_marginTop="16dp"
-                            android:contentDescription="@string/cell4Orange"
-                            android:tag="@string/cell4Orange"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/orange_circle"
-                            tools:ignore="ImageContrastCheck" />
-
-                        <ImageView
-                            android:id="@+id/cell4Blue"
+                            android:id="@+id/cell4"
                             android:layout_width="0dp"
-                            android:layout_height="116dp"
+                            android:layout_height="120dp"
                             android:layout_marginTop="14dp"
-                            android:contentDescription="@string/cell4Blue"
-                            android:tag="@string/cell4Blue"
+                            android:contentDescription="@string/cell4"
+                            android:tag="@string/cell4"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/blue_circle"
                             tools:ignore="ImageContrastCheck" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -185,28 +137,16 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/cell5Orange"
-                            android:layout_width="wrap_content"
-                            android:layout_height="120dp"
-                            android:layout_marginTop="16dp"
-                            android:contentDescription="@string/cell5Orange"
-                            android:tag="@string/cell5Orange"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/orange_circle"
-                            tools:ignore="ImageContrastCheck" />
-
-                        <ImageView
-                            android:id="@+id/cell5Blue"
+                            android:id="@+id/cell5"
                             android:layout_width="0dp"
-                            android:layout_height="116dp"
+                            android:layout_height="120dp"
                             android:layout_marginTop="14dp"
-                            android:contentDescription="@string/cell5Blue"
-                            android:tag="@string/cell5Blue"
+                            android:contentDescription="@string/cell5"
+                            android:tag="@string/cell5"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/blue_circle"
                             tools:ignore="ImageContrastCheck" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -217,31 +157,18 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/cell6Orange"
-                            android:layout_width="wrap_content"
-                            android:layout_height="120dp"
-                            android:layout_marginTop="16dp"
-                            android:contentDescription="@string/cell6Orange"
-                            android:tag="@string/cell6Orange"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/orange_circle"
-                            tools:ignore="ImageContrastCheck" />
-
-                        <ImageView
-                            android:id="@+id/cell6Blue"
+                            android:id="@+id/cell6"
                             android:layout_width="0dp"
-                            android:layout_height="116dp"
+                            android:layout_height="120dp"
                             android:layout_marginTop="14dp"
-                            android:contentDescription="@string/cell6Blue"
-                            android:tag="@string/cell6Blue"
+                            android:contentDescription="@string/cell6"
+                            android:tag="@string/cell6"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/blue_circle"
                             tools:ignore="ImageContrastCheck" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                 </TableRow>
 
                 <TableRow>
@@ -253,28 +180,16 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/cell7Orange"
-                            android:layout_width="wrap_content"
-                            android:layout_height="120dp"
-                            android:layout_marginTop="16dp"
-                            android:contentDescription="@string/cell7Orange"
-                            android:tag="@string/cell7Orange"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/orange_circle"
-                            tools:ignore="ImageContrastCheck" />
-
-                        <ImageView
-                            android:id="@+id/cell7Blue"
+                            android:id="@+id/cell7"
                             android:layout_width="0dp"
-                            android:layout_height="116dp"
+                            android:layout_height="120dp"
                             android:layout_marginTop="14dp"
-                            android:contentDescription="@string/cell7Blue"
-                            android:tag="@string/cell7Blue"
+                            android:contentDescription="@string/cell7"
+                            android:tag="@string/cell7"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/blue_circle"
                             tools:ignore="ImageContrastCheck" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -285,28 +200,16 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/cell8Orange"
-                            android:layout_width="wrap_content"
-                            android:layout_height="120dp"
-                            android:layout_marginTop="16dp"
-                            android:contentDescription="@string/cell8Orange"
-                            android:tag="@string/cell8Orange"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/orange_circle"
-                            tools:ignore="ImageContrastCheck" />
-
-                        <ImageView
-                            android:id="@+id/cell8Blue"
+                            android:id="@+id/cell8"
                             android:layout_width="0dp"
-                            android:layout_height="116dp"
+                            android:layout_height="120dp"
                             android:layout_marginTop="14dp"
-                            android:contentDescription="@string/cell8Blue"
-                            android:tag="@string/cell8Blue"
+                            android:contentDescription="@string/cell8"
+                            android:tag="@string/cell8"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/blue_circle"
                             tools:ignore="ImageContrastCheck" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -317,31 +220,18 @@
                         android:layout_weight="1">
 
                         <ImageView
-                            android:id="@+id/cell9Orange"
-                            android:layout_width="wrap_content"
-                            android:layout_height="120dp"
-                            android:layout_marginTop="16dp"
-                            android:contentDescription="@string/cell9Orange"
-                            android:tag="@string/cell9Orange"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/orange_circle"
-                            tools:ignore="ImageContrastCheck" />
-
-                        <ImageView
-                            android:id="@+id/cell9Blue"
+                            android:id="@+id/cell9"
                             android:layout_width="0dp"
-                            android:layout_height="116dp"
+                            android:layout_height="120dp"
                             android:layout_marginTop="14dp"
-                            android:contentDescription="@string/cell9Blue"
-                            android:tag="@string/cell9Blue"
+                            android:contentDescription="@string/cell9"
+                            android:tag="@string/cell9"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/blue_circle"
                             tools:ignore="ImageContrastCheck" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
-
                 </TableRow>
             </TableLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -369,6 +259,7 @@
             android:layout_marginTop="101dp"
             android:layout_marginEnd="159dp"
             android:layout_marginBottom="30dp"
+            android:onClick="playAgainHandler"
             android:text="Play Again"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

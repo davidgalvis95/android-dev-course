@@ -1,6 +1,7 @@
 package com.example.tictactoe;
 
 import android.graphics.Color;
+
 import android.os.Build;
 import android.os.Bundle;
 
@@ -23,6 +24,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,35 +48,34 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRootViewZAndReset();
+    }
+
+    public void playAgainHandler(View view){
+        setRootViewZAndReset();
+    }
+
+    public void setRootViewZAndReset(){
         setContentView(R.layout.activity_main);
         final View rootView = findViewById(android.R.id.content);
         clearAndResetAll(rootView);
     }
 
     public void clickCellHandler(View view) {
+//        System.out.println(view.getTag().toString());
+        ImageView imageView = (ImageView) view;
+        String tagValue = String.valueOf(imageView.getTag());
         if (!isThereWinner) {
-            final String tagValue = view.getTag().toString();
-            System.out.println(tagValue);
-            final ImageView clickedImage = (ImageView) view.findViewWithTag(tagValue);
-            clickedImage.setImageResource(R.drawable.blue_circle);
-            if (!clickedImage.isSelected()) {
-                clickedImage.setSelected(true);
-                final String cellNumber = tagValue.replaceAll("[^0-9]", "");
-                final String cellClicked = tagValue.split(cellNumber)[0].concat(cellNumber);
+            if (!imageView.isSelected()) {
+                imageView.setSelected(true);
                 if (this.currentColorMove.equals("Orange")) {
-                    System.out.println(cellClicked + "Blue");
-                    final ImageView clickedBlueImageView = (ImageView) view.findViewWithTag(cellClicked + "Blue");
+                    imageView.setImageResource(R.drawable.blue_circle);
                     this.setCurrentColorMove("Blue");
-                    clickedBlueImageView.setImageAlpha(255);
-                    clickedBlueImageView.setSelected(true);
-                    ticTacToeBlueMoves.add("cell" + cellNumber);
+                    ticTacToeBlueMoves.add(tagValue);
                 } else if (this.currentColorMove.equals("Blue")) {
-                    System.out.println(cellClicked + "Orange");
-                    final ImageView clickedOrangeImageView = (ImageView) view.findViewWithTag(cellClicked + "Orange");
+                    imageView.setImageResource(R.drawable.orange_circle);
                     this.setCurrentColorMove("Orange");
-                    clickedOrangeImageView.setImageAlpha(255);
-                    clickedOrangeImageView.setSelected(true);
-                    ticTacToeOrangeMoves.add("cell" + cellNumber);
+                    ticTacToeOrangeMoves.add(tagValue);
                 }
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -100,30 +101,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void winningHandler(final View view, final List<String> winnerCombination, final String winnerColor) {
-        final TextView winnerMessage = view.findViewById(R.id.winnerMessage);
-        winnerMessage.setTextColor(winnerColor.equals("Blue") ? Color.rgb(56, 137, 199) : Color.rgb(238, 131, 49));
+        setContentView(R.layout.activity_main);
+        final TextView winnerMessage = findViewById(R.id.winnerMessage);
         winnerMessage.setText(String.format("%s has won the game!", winnerColor));
+        winnerMessage.setTextColor(winnerColor.equals("Blue") ? Color.rgb(56, 137, 199) : Color.rgb(238, 131, 49));
         setThereWinner(true);
     }
 
     private void clearAndResetAll(final View view) {
+        ticTacToeOrangeMoves.removeIf(Objects::nonNull);
+        ticTacToeBlueMoves.removeIf(Objects::nonNull);
         final TextView winnerMessage = view.findViewById(R.id.winnerMessage);
         winnerMessage.setText("");
         setThereWinner(false);
-        final String blueSuffix = "Blue";
-        final String orangeSuffix = "Orange";
-//        this.setCurrentColorMove(Math.random() > 0.5 ? "Blue" : "Orange");
         this.setCurrentColorMove("Blue");
         for (int i = 1; i <= 9; i++) {
-            final ImageView blueView = view.findViewWithTag("cell" + i + blueSuffix);
-            final ImageView orangeView = view.findViewWithTag("cell" + i + orangeSuffix);
-            blueView.setImageAlpha(0);
-//            blueView.animate().alpha(0);
-            orangeView.setImageAlpha(0);
-//            orangeView.animate().alpha(0);
-            blueView.setOnClickListener(this::clickCellHandler);
-
-            orangeView.setOnClickListener(this::clickCellHandler);
+            final ImageView imageView = view.findViewWithTag("cell" + i);
+            imageView.setOnClickListener(this::clickCellHandler);
+            imageView.setSelected(false);
+            imageView.setImageDrawable(null);
         }
     }
 
