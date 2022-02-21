@@ -1,6 +1,7 @@
 package com.example.tictactoe;
 
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -53,38 +54,39 @@ public class MainActivity extends AppCompatActivity {
     public void clickCellHandler(View view) {
         if (!isThereWinner) {
             final String tagValue = view.getTag().toString();
+            System.out.println(tagValue);
             final ImageView clickedImage = (ImageView) view.findViewWithTag(tagValue);
+            clickedImage.setImageResource(R.drawable.blue_circle);
             if (!clickedImage.isSelected()) {
                 clickedImage.setSelected(true);
                 final String cellNumber = tagValue.replaceAll("[^0-9]", "");
                 final String cellClicked = tagValue.split(cellNumber)[0].concat(cellNumber);
                 if (this.currentColorMove.equals("Orange")) {
-                    this.setCurrentColorMove("Blue");
+                    System.out.println(cellClicked + "Blue");
                     final ImageView clickedBlueImageView = (ImageView) view.findViewWithTag(cellClicked + "Blue");
+                    this.setCurrentColorMove("Blue");
                     clickedBlueImageView.setImageAlpha(255);
-//                    clickedBlueImageView.animate().alpha(1).setDuration(500);
                     clickedBlueImageView.setSelected(true);
-                } else {
-                    this.setCurrentColorMove("Orange");
+                    ticTacToeBlueMoves.add("cell" + cellNumber);
+                } else if (this.currentColorMove.equals("Blue")) {
+                    System.out.println(cellClicked + "Orange");
                     final ImageView clickedOrangeImageView = (ImageView) view.findViewWithTag(cellClicked + "Orange");
+                    this.setCurrentColorMove("Orange");
                     clickedOrangeImageView.setImageAlpha(255);
-//                    clickedOrangeImageView.animate().alpha(1).setDuration(500);
                     clickedOrangeImageView.setSelected(true);
+                    ticTacToeOrangeMoves.add("cell" + cellNumber);
                 }
 
-                if (tagValue.contains("Orange")) {
-                    ticTacToeOrangeMoves.add("cell" + cellNumber);
-                } else {
-                    ticTacToeBlueMoves.add("cell" + cellNumber);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    winningCombinations.forEach(combination -> {
+                        if (ticTacToeBlueMoves.containsAll(combination)) {
+                            winningHandler(view, combination, "Blue");
+                        }
+                        if (ticTacToeOrangeMoves.containsAll(combination)) {
+                            winningHandler(view, combination, "Orange");
+                        }
+                    });
                 }
-                winningCombinations.forEach(combination -> {
-                    if (ticTacToeBlueMoves.containsAll(combination)) {
-                        winningHandler(view, combination, "Blue");
-                    }
-                    if (ticTacToeOrangeMoves.containsAll(combination)) {
-                        winningHandler(view, combination, "Orange");
-                    }
-                });
             }
         }
     }
@@ -110,7 +112,8 @@ public class MainActivity extends AppCompatActivity {
         setThereWinner(false);
         final String blueSuffix = "Blue";
         final String orangeSuffix = "Orange";
-        this.setCurrentColorMove(Math.random() > 0.5 ? "Blue" : "Orange");
+//        this.setCurrentColorMove(Math.random() > 0.5 ? "Blue" : "Orange");
+        this.setCurrentColorMove("Blue");
         for (int i = 1; i <= 9; i++) {
             final ImageView blueView = view.findViewWithTag("cell" + i + blueSuffix);
             final ImageView orangeView = view.findViewWithTag("cell" + i + orangeSuffix);
